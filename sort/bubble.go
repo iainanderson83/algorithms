@@ -1,7 +1,12 @@
 package sort
 
 // BubbleSort is an implementation of the bubble sort algorithm.
+// O(n^2) time + O(n) space.
 func BubbleSort(numbers []int) {
+	if len(numbers) <= 1 {
+		return
+	}
+
 	andAgain := true
 	for andAgain {
 		andAgain = false
